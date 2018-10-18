@@ -1,4 +1,5 @@
-myplot <- function(df, inst){
+
+myplot <- function(df, inst="NEA"){
 #select and prep data
   df1<-df%>%
     filter(INST==inst, FISS!="SPEC")%>%
