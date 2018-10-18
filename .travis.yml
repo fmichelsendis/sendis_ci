@@ -2,6 +2,8 @@ language: r
 sudo: false
 cache: packages
 install:
+- R -e "install.packages('data.table','dplyr','plotly','ggplot2','splitstackshape')"
+script:
 - R -e "source('global.R')"
 - R -e "source('myplot.R')"
 - R -e "myplot(df)"
