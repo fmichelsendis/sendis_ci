@@ -1,5 +1,8 @@
 language: r
 sudo: false
 cache: packages
-script:
-  - Rscript build.R
+install:
+- R -e "source('global.R')"
+- R -e "source('myplot.R')"
+- R -e "myplot(df)"
+- R -e "quit(status=1)"
