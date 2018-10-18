@@ -4,10 +4,10 @@
 #  Author: F.Michel-Sendis                  #
 #                                           #
 #############################################
-library(DT)
+
 library(data.table)
 library(dplyr)
-library(stringr)
+#library(stringr)
 library(plotly)
 library(ggplot2)
 library(splitstackshape)
