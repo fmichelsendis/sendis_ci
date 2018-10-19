@@ -3,6 +3,8 @@ sudo: false
 cache: packages
 
 install:
+- Rscript -e "getwd()"
+- Rscript -e "setwd(~/.)"
 - Rscript -e "install.packages('data.table')"
 - Rscript -e "install.packages('dplyr')"
 - Rscript -e "install.packages('ggplot2')"
@@ -12,4 +14,8 @@ script:
 - Rscript "source('global.R')"
 - Rscript "source('myplot.R')"
 - Rscript "myplot(df)"
-- Rscript "quit(status=1)"
+
+
+
+
+
