@@ -2,16 +2,13 @@ language: r
 sudo: false
 cache: packages
 
-install:
-- Rscript -e "install.packages('data.table')"
-- Rscript -e "install.packages('dplyr')"
-- Rscript -e "install.packages('ggplot2')"
-- Rscript -e "install.packages('splitstackshape')"
-
-before_script:
-- cd $TRAVIS_BUILD_DIR/sendis_ci
+#install:
+#- Rscript -e "install.packages('data.table')"
+#- Rscript -e "install.packages('dplyr')"
+#- Rscript -e "install.packages('ggplot2')"
+#- Rscript -e "install.packages('splitstackshape')"
 
 script:
-- Rscript -e "source('sendis_ci/global.R')"
-- Rscript -e "source('sendis_ci/myplot.R')"
+- Rscript -e "source('global.R')"
+- Rscript -e "source('myplot.R')"
 - Rscript -e "myplot(df, output ='png')"
