@@ -9,6 +9,4 @@ install:
 - Rscript -e "install.packages('splitstackshape')"
 
 script:
-- Rscript -e "source('global.R')"
-- Rscript -e "source('myplot.R')"
-- Rscript -e "myplot(df, output ='png')"
+- Rscript -e "source('build.R')" 
