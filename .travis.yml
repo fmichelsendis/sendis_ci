@@ -2,20 +2,16 @@ language: r
 sudo: false
 cache: packages
 
-install:
+before_install:
+- cd sendis_ci
 
+install:
 - Rscript -e "install.packages('data.table')"
 - Rscript -e "install.packages('dplyr')"
 - Rscript -e "install.packages('ggplot2')"
 - Rscript -e "install.packages('splitstackshape')"
-- cd sendis_ci 
 
 script:
 - Rscript "source('global.R')"
 - Rscript "source('myplot.R')"
-- Rscript "myplot(df, output='png')" 
-
-
-
-
-
+- Rscript "myplot(df)" 
