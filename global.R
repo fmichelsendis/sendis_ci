@@ -21,12 +21,12 @@ library(splitstackshape)
 
 #read data:
   df_calcs<-fread('data/mydata.csv')
-  df_calcs$V1<-NULL
-  df_calcs[df_calcs==""]<-NA
-#merging with expdata
   expdata<-fread('data/all_expdata.csv')
-  expdata$V1<-NULL
+  df_calcs[df_calcs==""]<-NA
+
+#merging with expdata
   df<-merge(expdata, df_calcs, all=FALSE)
+  
 #RE-CREATE missing columns
   df<- df %>% mutate(
     COVERE=CALCVAL/EXPVAL,
