@@ -8,9 +8,11 @@ myplot <- function(df, inst="NEA"){
   g<-ggplot() +
     geom_ribbon(data=df1, aes(x= EALF, ymin = 1-EXPERR, ymax= 1+EXPERR), alpha=0.2) +
     geom_point(data=df1, aes(x=EALF, y=COVERE, colour=LIBVER, shape=FISS), alpha=0.8) +
-    labs(x = "Average Neutron Energy", y = "C/E")+
+    labs(x = "Average neutron energy causing fission (eV)", y = "C/E")+
     ylim(0.95, 1.03) +
-    scale_x_log10()+ annotation_logticks()+
+    scale_x_log10(breaks = trans_breaks("log10", function(x) 10^x),
+                  labels = trans_format("log10", math_format(10^.x)))+
+    annotation_logticks(sides = "tb") +
     theme_bw()+ theme(legend.title = element_blank())
 #print the plot to a pdf file
     pdf("myplot.pdf")

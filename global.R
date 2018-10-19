@@ -7,8 +7,8 @@
 
 library(data.table)
 library(dplyr)
-#library(stringr)
-library(plotly)
+library(scales)
+#library(plotly)
 library(ggplot2)
 library(splitstackshape)
 
