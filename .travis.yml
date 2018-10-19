@@ -14,4 +14,4 @@ install:
 script:
 - Rscript "source('global.R')"
 - Rscript "source('myplot.R')"
-- Rscript "myplot(df)" 
+- Rscript "myplot(df, output ='png')"
