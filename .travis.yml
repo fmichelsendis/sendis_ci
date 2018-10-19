@@ -14,7 +14,7 @@ script:
 deploy:
      provider: releases
      api_key:
-         secure: <your key>
+         secure: bce23a0384e068655bc7175fb6342e14550577cf
      file:
          - myplot.png
      skip_cleanup: true
