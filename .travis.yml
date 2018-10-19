@@ -4,7 +4,7 @@ cache: packages
 
 install:
 - Rscript -e "getwd()"
-- Rscript -e "setwd(~/.)"
+- Rscript -e "setwd('~/.')"
 - Rscript -e "install.packages('data.table')"
 - Rscript -e "install.packages('dplyr')"
 - Rscript -e "install.packages('ggplot2')"
