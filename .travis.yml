@@ -3,17 +3,17 @@ sudo: false
 cache: packages
 
 install:
-- Rscript -e "getwd()"
-- Rscript -e "setwd('~/.')"
+
 - Rscript -e "install.packages('data.table')"
 - Rscript -e "install.packages('dplyr')"
 - Rscript -e "install.packages('ggplot2')"
 - Rscript -e "install.packages('splitstackshape')"
+- cd sendis_ci 
 
 script:
 - Rscript "source('global.R')"
 - Rscript "source('myplot.R')"
-- Rscript "myplot(df)"
+- Rscript "myplot(df, output='png')" 
 
 
 
