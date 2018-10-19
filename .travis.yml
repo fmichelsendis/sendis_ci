@@ -11,13 +11,14 @@ install:
 script:
 - Rscript -e "source('build.R')"
 
-deploy: 
+deploy:
      provider: releases
      api_key:
          secure: bce23a0384e068655bc7175fb6342e14550577cf
      file:
          - myplot.png
      skip_cleanup: true
+     overwrite: true
      on:
          repo: fmichelsendis/sendis_ci
          tags: true
