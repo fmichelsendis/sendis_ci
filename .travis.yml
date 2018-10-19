@@ -2,11 +2,11 @@ language: r
 sudo: false
 cache: packages
 
-#install:
-#- Rscript -e "install.packages('data.table')"
-#- Rscript -e "install.packages('dplyr')"
-#- Rscript -e "install.packages('ggplot2')"
-#- Rscript -e "install.packages('splitstackshape')"
+install:
+- Rscript -e "install.packages('data.table')"
+- Rscript -e "install.packages('dplyr')"
+- Rscript -e "install.packages('ggplot2')"
+- Rscript -e "install.packages('splitstackshape')"
 
 script:
 - Rscript -e "source('global.R')"
