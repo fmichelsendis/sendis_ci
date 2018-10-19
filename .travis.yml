@@ -2,8 +2,8 @@ language: r
 sudo: false
 cache: packages
 
-before_install:
-- cd ~/sendis_ci
+before_script:
+- cd $TRAVIS_BUILD_DIR/project
 
 install:
 - Rscript -e "install.packages('data.table')"
