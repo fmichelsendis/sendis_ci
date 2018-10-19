@@ -3,7 +3,7 @@ sudo: false
 cache: packages
 
 before_install:
-- cd sendis_ci
+- cd ~/sendis_ci
 
 install:
 - Rscript -e "install.packages('data.table')"
