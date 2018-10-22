@@ -9,16 +9,6 @@ install:
 - Rscript -e "install.packages('splitstackshape')"
 
 script:
-- Rscript -e "source('build.R')"
+- R -f ci/build.R
 
-deploy:
-     provider: releases
-     api_key:
-       secure :"2bf37e4fe98e15f78cebd78d87559de63e84f2a1"
-     file:
-         - myplot.png
-     skip_cleanup: true
-     overwrite: true
-     on:
-         repo: fmichelsendis/sendis_ci
-         tags: true
+
