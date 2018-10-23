@@ -1,9 +1,6 @@
 #Is executed from above
 source('app/global.R')
-source('libs/myfunctions.R')
 
-library(testthat)
-library(shinytest)
 
 test_that("Application works", {
   # Use compareImages=FALSE because the expected image screenshots were created
