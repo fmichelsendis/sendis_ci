@@ -30,10 +30,13 @@ library(shinydashboard)
 library(shinythemes)
 library(shinyjs)  
 library(splitstackshape)
-library(testthat)
-library(devtools)
-#install.packages("shinytest")
-#library(shinytest)
+# library(testthat)
+# library(devtools)
+# 
+# if (system.file(package="shinytest") == "")   install.packages("shinytest")
+# library(shinytest)
+# shinytest::installDependencies()
+# library(shinytest)
 
 source('libs/myfunctions.R')
 
