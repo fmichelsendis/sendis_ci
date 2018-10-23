@@ -32,10 +32,10 @@ library(shinyjs)
 library(splitstackshape)
 library(testthat)
 library(devtools)
-#devtools::install_github("rstudio/shinytest")
-#library(shinytest)
+install.packages("shinytest")
+library(shinytest)
 
-source('libs/myfunctions.R')
+source('app/libs/myfunctions.R')
 
 #############################################
 #                                           #
