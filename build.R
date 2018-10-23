@@ -1,5 +1,5 @@
-#Is executed from above
-source('app/global.R')
+#Is executed from ~/sendis_ci
+source('global.R')
 
 
 test_that("Application works", {

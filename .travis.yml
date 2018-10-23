@@ -9,6 +9,6 @@ install:
 - Rscript -e "install.packages('splitstackshape')"
 
 script:
-- R -f ci/build.R
+- R -f build.R
 
 
