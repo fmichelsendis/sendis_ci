@@ -18,7 +18,7 @@ if (system.file(package="shinyjs") == "")     install.packages("shinyjs")
 if (system.file(package="splitstackshape") == "") install.packages("splitstackshape")
 if (system.file(package="testthat") == "")    install.packages("testthat")
 if (system.file(package="devtools") == "")    install.packages("devtools")  
-
+ 
 
 
 suppressPackageStartupMessages({
@@ -34,9 +34,12 @@ library(shinydashboard)
 library(shinythemes)
 library(shinyjs)  
 library(splitstackshape)
-  
+library(devtools)
 })
   
+if (system.file(package="sendis") == "")    install.packages("fmichelsendis/sendis") 
+library(sendis)
+
 # library(testthat)
 # library(devtools)
 # 
@@ -45,7 +48,8 @@ library(splitstackshape)
 # shinytest::installDependencies()
 # library(shinytest)
 
-source('libs/myfunctions.R')
+
+#source('libs/myfunctions.R')
 
 #############################################
 #                                           #
